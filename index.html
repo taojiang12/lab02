@@ -14,9 +14,9 @@
     <div id="app">
         <div class="nav-bar"></div>
 
-        <div class="cart">Cart({{ cart }})</div>
+        <div class="cart">Cart({{ cart.length }})</div>
 
-       <product-display :premium="premium"> </product-display>
+       <product-display :premium="premium" @add-to-cart="updateCart" @del-to-cart="del"> </product-display>
        <productdetails :details="details"></productdetails>
       
        
@@ -25,7 +25,7 @@
     <!-- Import Js -->
     <script src="./main.js "></script>
     <!-- Import Compoents-->
-    <script src="./ProductDisplay.js"></script>
+    <script src="./components/ProductDisplay.js"></script>
     <script>
         const mountedApp = app.mount('#app')
     </script>

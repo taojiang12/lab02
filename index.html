@@ -16,16 +16,15 @@
 
         <div class="cart">Cart({{ cart.length }})</div>
 
-       <product-display :premium="premium" @add-to-cart="updateCart" @del-to-cart="del"> </product-display>
-       <productdetails :details="details"></productdetails>
-      
-       
+       <product-display :premium="premium" @add-to-cart="updateCart" @clear-cart="clearCart"></product-display>
+       <product-details :details="details"></product-details>
     </div>
 
     <!-- Import Js -->
     <script src="./main.js "></script>
-    <!-- Import Compoents-->
+    <!-- Import Components -->
     <script src="./components/ProductDisplay.js"></script>
+ 
     <script src="./components/ReviewForm.js"></script>
     <script src="./components/ReviewList.js"></script>
     <script>
